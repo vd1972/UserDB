@@ -1,0 +1,11 @@
+C:\Dojo\csharpnew\dv1972\userdb\bin\Debug\netcoreapp2.0\userdb.deps.json
+C:\Dojo\csharpnew\dv1972\userdb\bin\Debug\netcoreapp2.0\userdb.runtimeconfig.json
+C:\Dojo\csharpnew\dv1972\userdb\bin\Debug\netcoreapp2.0\userdb.runtimeconfig.dev.json
+C:\Dojo\csharpnew\dv1972\userdb\bin\Debug\netcoreapp2.0\userdb.dll
+C:\Dojo\csharpnew\dv1972\userdb\bin\Debug\netcoreapp2.0\userdb.pdb
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.csprojResolveAssemblyReference.cache
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.csproj.CoreCompileInputs.cache
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.AssemblyInfoInputs.cache
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.AssemblyInfo.cs
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.dll
+C:\Dojo\csharpnew\dv1972\userdb\obj\Debug\netcoreapp2.0\userdb.pdb

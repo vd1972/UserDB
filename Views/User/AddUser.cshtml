@@ -1,0 +1,30 @@
+@model userdb.Models.UserView
+<h1>New User</h1>
+<form asp-controller="User" asp-action="NewUser" method="post">
+    <div class="form-group">
+        <span asp-validation-for="first_name"></span>
+        <label asp-for="first_name"></label>
+        <input class="form-control" asp-for="first_name">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="last_name"></span>
+        <label asp-for="last_name"></label>
+        <input class="form-control" asp-for="last_name">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="email"></span>
+        <label asp-for="email"></label>
+        <input class="form-control" asp-for="email">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="password"></span>
+        <label asp-for="password"></label>
+        <input class="form-control" asp-for="password">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="confirmpwd"></span>
+        <label asp-for="confirmpwd"></label>
+        <input class="form-control" asp-for="confirmpwd">
+    </div>
+    <input type="submit" value="Add">
+</form>

@@ -1,0 +1,38 @@
+@model userdb.Models.User
+<h1>@Model.first_name @Model.last_name</h1>
+<h5>Registered At: @Model.created_at</h5>
+<h5>User ID: @Model.user_id</h5>
+<h5>Email: @Model.email</h5>
+
+<form asp-controller="User" asp-action="AddMessage" method="post" asp-route-id="@Model.user_id">
+    <div class="form-group"  style="margin 5px">
+        <input class="form-control" name="message_description" placeholder="Add a message to @Model.first_name">
+    </div>
+    <input type="submit" value="Add Message">
+</form>
+<div class="panel panel-default">
+    @foreach (Message message in Model.messages)
+    {
+        <div class="panel-heading">
+        <div class="card-block">
+            <p>@message.message_added_by wrote:</p>
+            <div class="panel-body">
+            <dl>
+            <dt>@message.message_description</dt>
+            @foreach (Comment comment in message.comments)
+            {
+                    <dd style="margin-left:30px" ><i>@comment.comment_added_by wrote:</i></dd>
+                    <dd style="margin-left:30px" >@comment.comment_description</dd>
+            }
+            </dl>
+            </div>
+            <form asp-controller="User" asp-action="AddComment" method="post"  asp-route-id="@message.message_id">
+                <div class="form-group" style="margin 5px">
+                    <input class="form-control" name="comment_description" placeholder="Add your comments">
+                </div>
+                <input type="submit" value="Add Comment">
+            </form>
+        </div>
+        </div>
+    }
+</div>

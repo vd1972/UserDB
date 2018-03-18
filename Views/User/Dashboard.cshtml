@@ -1,0 +1,42 @@
+@using Microsoft.AspNetCore.Http;
+
+<h3>Manage Users</h3>
+<div class="container"></div>
+@if (ViewBag.Is_Admin==1)
+{
+    <form asp-controller="User" asp-action="AddUser" method="get">
+        <button type="submit">Add New</button>
+    </form>
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>User Level</th>
+            @if (ViewBag.Is_Admin==1)
+            {
+              <th>Actions</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+            @foreach(User user in Model.SiteUsers)
+            {
+            <tr>
+                <td>@user.user_id</td>
+                <td><a asp-controller="User" asp-action="UserInfo" asp-route-id="@user.user_id"> @user.first_name @user.last_name</a></td>
+                <td>@user.email</td>
+                <td>@user.created_at</td>
+                <td>@user.user_level_desc</td>
+                @if (ViewBag.Is_Admin==1)
+                {
+                    <td><a asp-controller="User" asp-action="EditProfileByAdmin" asp-route-id="@user.user_id">Edit</a>
+                        <a asp-controller="User" asp-action="RemoveUser" asp-route-id="@user.user_id">Remove</a></td>
+                }
+            </tr>
+            }
+    </tbody>
+</table>

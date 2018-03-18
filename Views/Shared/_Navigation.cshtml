@@ -1,0 +1,22 @@
+@using Microsoft.AspNetCore.Http;
+
+    <h1><a href="#">User Dashboard App</a></h1>
+    <div class="navbar navbar-default">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a asp-controller="Home" asp-action="Index"> Home</a></li>
+                        @if (ViewData["Current_User_Id"]!=null)
+                        {
+                        <li><a asp-controller="User" asp-action="Dashboard"> Dashboard</a></li>
+                        <li><a asp-controller="User" asp-action="EditProfile"> Profile</a></li>
+                        <li><a asp-controller="User" asp-action="Logout"> Sign Out</a></li>
+                        }
+                        @if (ViewData["Current_User_Id"]==null)
+                        {
+                        <li><a asp-controller="User" asp-action="Login"> Sign In</a></li>
+                        }
+                </ul>
+            </div>
+        </div>
+    </div>
